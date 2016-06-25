@@ -18,24 +18,28 @@ public class LineSort {
      */
     public static void main(String[] args) {
         ArrayList<Integer> dataSet = new ArrayList<>();
-        int[] sortedDataSet = new int[500000];
-        for (int g = 0; g < 500000; g++) {
-            dataSet.add((int) (Math.random() * 500));
+        int[] sortedDataSet = new int[300001];
+        for (int g = 0; g < 300000; g++) {
+            dataSet.add((int) (Math.random() * 300000));
 
         }
+        double start = System.currentTimeMillis();
         for (int i = 0; i < dataSet.size(); i++) {
             sortedDataSet[dataSet.get(i)] = sortedDataSet[dataSet.get(i)] + 1;
         }
 
         for (int z = 0; z < sortedDataSet.length; z++) {
-                if (sortedDataSet[z] != 0) {
-                    System.out.println(z);
-                    sortedDataSet[z] = sortedDataSet[z] - 1;
-                    z--; 
-                } else {
-                             
+            if (sortedDataSet[z] != 0) {
+                //System.out.print(z + " ");
+                //System.out.println(z);
+                sortedDataSet[z] = sortedDataSet[z] - 1;
+                z--;
+            } else {
+
             }
         }
+        double end = System.currentTimeMillis();
+        double finished = end - start;
+        System.out.println(finished / 1000 + " seconds to complete sort");
     }
-
 }
