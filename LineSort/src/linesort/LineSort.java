@@ -18,9 +18,9 @@ public class LineSort {
      */
     public static void main(String[] args) {
         ArrayList<Integer> dataSet = new ArrayList<>();
-        int[] sortedDataSet = new int[300001];
-        for (int g = 0; g < 300000; g++) {
-            dataSet.add((int) (Math.random() * 300000));
+        int[] sortedDataSet = new int[20000001];
+        for (int g = 0; g < 20000000; g++) {
+            dataSet.add((int) (Math.random() * 20000000));
 
         }
         double start = System.currentTimeMillis();
